@@ -282,7 +282,7 @@ const [similarJob, setSimilarJob] = useState(null)
   useEffect(() => {
     const fetchJobDetail = async () => {
       try {
-        const response = await axios.get(`https://job-bing.vercel.app/jobs/get-job-detail/${jobId}`);
+        const response = await axios.get(`http://localhost:8800/api-v1/jobs/get-job-detail/${jobId}`);
         setJob(response.data.data);
         setSimilarJob(response.data.similarJobs)
       } catch (error) {
